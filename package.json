@@ -1,0 +1,47 @@
+{
+  "name": "famous-flex-tabbarcontroller",
+  "private": "true",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "aliasify": "^1.7.2",
+    "browserify": "^10.0.0",
+    "css-loader": "^0.7.0",
+    "deamdify": "^0.1.1",
+    "expose-loader": "^0.5.3",
+    "famous": "^0.3.5",
+    "famous-bkimagesurface": "^1.0.3",
+    "famous-flex": "^0.3.1",
+    "famous-lagometer": "latest",
+    "famous-map": "^0.3.1",
+    "famous-polyfills": "^0.2.2",
+    "file-loader": "^0.6.1",
+    "glob": "^4.0.5",
+    "grunt": "latest",
+    "grunt-browserify": "^3.7.0",
+    "grunt-eslint": "latest",
+    "grunt-exec": "latest",
+    "grunt-ftp-deploy": "latest",
+    "grunt-jscs": "latest",
+    "html-loader": "^0.2.2",
+    "ismobilejs": "^0.3.5",
+    "json-loader": "^0.5.1",
+    "less": "^1.7.4",
+    "less-loader": "^0.7.5",
+    "moment": "^2.9.0",
+    "optimist": "^0.6.1",
+    "script-loader": "^0.6.0",
+    "style-loader": "^0.6.4",
+    "url-loader": "^0.5.5",
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
+  },
+  "scripts": {},
+  "aliasify": {
+    "aliases": {
+      "famous-flex": "famous-flex/src"
+    }
+  }
+}
