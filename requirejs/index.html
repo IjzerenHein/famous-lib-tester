@@ -37,7 +37,18 @@
                 paths: {
                     'fastclick': '../node_modules/fastclick',
                     'ismobilejs': '../node_modules/ismobilejs/isMobile.min',
-                    'famous-bkimagesurface': '../node_modules/famous-bkimagesurface'
+                    'famous-bkimagesurface': '../node_modules/famous-bkimagesurface',
+                    'famous-refresh-loader': '../node_modules/famous-refresh-loader',
+                    'famous-autosizetextarea': '../node_modules/famous-autosizetextarea',
+                    'moment': '../node_modules/moment',
+                    'cuid': '../node_modules/cuid/dist/browser-cuid',
+                    'handlebars': '../node_modules/handlebars',
+                    'firebase': '../node_modules/firebase/lib/firebase-web'
+                },
+                shim: {
+                    'firebase': {
+                        exports: 'Firebase'
+                    }
                 }
             });
             require(['main']);

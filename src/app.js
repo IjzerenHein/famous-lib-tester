@@ -12,9 +12,10 @@ define(function(require) {
     // import dependencies
     var Engine = require('famous/core/Engine');
     var isMobile = require('ismobilejs');
-    var TabBarController = require('./TabBarController');
+    var TabBarController = require('famous-flex/widgets/TabBarController');
     var LocationView = require('./views/LocationView');
     var MapView = require('famous-map/MapView');
+    var ChatView = require('./views/ChatView');
 
     // On mobile, disable app-mode and install the custom MapView
     // touch-handler so that Google Maps works.
@@ -28,15 +29,12 @@ define(function(require) {
 
     // Create tab-bar controller
     var tabBarController = new TabBarController({
-        layoutController: {
-            layoutOptions: {
-                tabBarSize: 150,
-                tabBarPosition: TabBarController.TabBarPosition.LEFT
-            }
-        }
+        tabBarSize: 150,
+        tabBarPosition: TabBarController.Position.LEFT
     });
     tabBarController.setItems([
-        {tabItem: 'Map', view: new LocationView()}
+        {tabItem: 'Map', view: new LocationView()},
+        {tabItem: 'Chat', view: new ChatView()}
     ]);
     mainContext.add(tabBarController);
 });

@@ -1,5 +1,6 @@
 body, div {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
 
   /* prevent text selection */
   -moz-user-select: -moz-none;
@@ -9,8 +10,23 @@ body, div {
   user-select: none;
 }
 body {
-  background-color: #333333;
+  background-color: white;
 }
+
+
+/*body, div {
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+}
+body {
+  background-color: white;
+  position: absolute;
+}
+body > div {
+  background-color: white;
+}*/
+
+
 
 .frame {
   pointer-events: none;
@@ -88,4 +104,143 @@ body {
   border-style: solid;
   border-width: 20px 10px 0 10px;
   border-color: white transparent transparent transparent;
+}
+
+
+/**
+ * Name-bar
+ */
+.name-input {
+  font-size: 16px;
+  padding: 6px 10px 6px 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-bottom: 1px solid #CCCCCC;
+  z-index: 10;
+}
+
+/**
+ * Message-bar
+ */
+.message-back {
+  border-top: 1px solid #CCCCCC;
+  background-color: #EEEEEE;
+}
+.message-input {
+  border-radius: 7px;
+  border-color: #CCCCCC;
+  font-size: 16px;
+  padding: 6px 5px 6px 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.message-send {
+  text-align: center;
+  line-height: 34px;
+  font-weight: 600;
+}
+
+
+/**
+ * Message-day
+ */
+.message-day {
+  padding: 5px 10px 15px 10px;
+  overflow: hidden;
+  text-align: center;
+  z-index: 10;
+  /*background: white;*/
+  /* disable text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.message-day .text{
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  padding: 5px 10px;
+  background: rgb(187, 191, 114);
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+}
+
+
+/**
+ * Message-bubbles
+ */
+.message-bubble {
+  padding: 0 10px 10px 10px;
+  /* disable text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  background: white;
+}
+.message-bubble.send {
+  padding: 0 10px 10px 30px;
+}
+.message-bubble.received {
+  padding: 0 30px 10px 10px;
+}
+.message-bubble .back {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #DDDDDD;
+  padding: 8px 8px 8px 8px;
+  float: left;
+  max-width: 100%;
+}
+.message-bubble.send .back {
+  background-color: rgb(114, 173, 191);
+  float: right;
+}
+.message-bubble .author {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.message-bubble .time {
+  float: right;
+  font-size: 12px;
+  line-height: 18px;
+  margin-left: 10px;
+  color: #888888;
+}
+.message-bubble.send .time {
+  color: #444444;
+}
+.message-bubble .message {
+  margin-top: 3px;
+  font-size: 16px;
+  word-wrap: break-word;
+  -word-break: break-all;
+}
+.message-bubble .back:after {
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  border-style: solid;
+  border-color: transparent #DDDDDD;
+  display: block;
+  width: 0;
+}
+.message-bubble.send .back:after {
+  border-width: 5px 0 5px 10px;
+  right: 2px;
+  border-color: transparent rgb(114, 173, 191);
+}
+.message-bubble.received .back:after {
+  border-width: 5px 10px 5px 0;
+  left: 2px;
 }
